@@ -46,9 +46,7 @@ main :: proc() {
 
 net_main :: proc(sockClient: net.TCP_Socket) {
 	errNet: net.Network_Error
-	msgSend : [1024]u8
 	msgRecv : [1024]u8
-	ctSend : int
 	ctRecv : int
 
 	for {

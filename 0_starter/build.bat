@@ -20,17 +20,22 @@ if not exist "out\release" mkdir "out\release"
 if not exist "out\debug" mkdir "out\debug"
 
 echo Building Client [Debug]...
-odin.exe build client.odin -file -strict-style ^
+odin.exe build client.odin -file ^
+-strict-style -vet -vet-using-param -vet-cast -vet-tabs ^
 -o:none -debug -out:.\out\debug\client.exe
 
 echo Building Client [Release]...
-odin.exe build client.odin -file -strict-style ^
+odin.exe build client.odin -file ^
+-strict-style -vet -vet-using-param -vet-cast -vet-tabs ^
 -o:aggressive -out:.\out\release\client.exe
 
 echo Building Server [Debug]...
-odin.exe build server.odin -file -strict-style ^
+odin.exe build server.odin -file ^
+-strict-style -vet -vet-using-param -vet-cast -vet-tabs ^
 -o:none -debug -out:.\out\debug\server.exe
 
 echo Building Server [Release]...
-odin.exe build server.odin -file -strict-style ^
+odin.exe build server.odin -file ^
+-strict-style -vet -vet-using-param -vet-cast -vet-tabs ^
 -o:aggressive -out:.\out\release\server.exe
+

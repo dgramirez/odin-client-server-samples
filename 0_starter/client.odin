@@ -10,9 +10,7 @@ main :: proc() {
 	epServer : net.Endpoint
 	sockControl : net.TCP_Socket
 	strSend : string
-	msgRecv : [1024]u8
 	msgSend : [1024]u8
-	ctRecv : int
 	ctSend : int
 	errNet : net.Network_Error
 	isOK : bool
